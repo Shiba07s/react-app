@@ -34,7 +34,13 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href=" ">
+                {/* <a href="/queue-vehicle-weigh"> */}
+                <a href="/add-wbform">
+                    <FaArchive className='icon'/> Weigh-bridge Operator
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="/add-quality-form">
                     <FaTh className='icon'/> Quality-Check
                 </a>
             </li>

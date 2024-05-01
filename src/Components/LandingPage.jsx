@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'; // Import useState here
 import { Link } from 'react-router-dom'
 
 import '../Login.css';
 import BackgroundImage from '../assets/bg.png'
-// import { Navigation } from "./Components/navigation";
+import { Navigation } from "./navigation";
 import { Header } from "./headerpage";
 import { Features } from "./features";
 import { About } from "./about";
@@ -28,6 +28,8 @@ export default function LandingPage() {
       }, []);
     return (
         <div className="div">
+                <Navigation />
+
             <Header data={landingPageData.Header} />
               <Features data={landingPageData.Features} />
               <About data={landingPageData.About} />
@@ -42,7 +44,7 @@ export default function LandingPage() {
 
 const HeaderStyle = {
     width: "100%",
-    height: "100vh",
+    // height: "100vh",
     background: `url(${BackgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",

@@ -1,5 +1,6 @@
 import { Image } from "./image";
 import React from "react";
+import '../LandingPage.css'
 
 export const Gallery = (props) => {
   return (

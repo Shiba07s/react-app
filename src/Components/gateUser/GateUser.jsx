@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'; // Import toast from react-toastify
 import 'react-toastify/dist/ReactToastify.css'; // Import the CSS
 import Header from '../Header'
 import Sidebar from '../Sidebar'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const GateUser = () => {
 
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -277,13 +277,13 @@ const GateUser = () => {
   </select>
 </div>
 
-
+{/* className="gate-form w-100" */}
 
 
           </div>
       </div>
       
-      <form className="gate-form w-100" onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-3">
             <div className="mb-3">

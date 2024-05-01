@@ -1,4 +1,5 @@
 import React from "react";
+import '../LandingPage.css'
 
 export const Team = (props) => {
   return (

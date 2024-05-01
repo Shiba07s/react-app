@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import smoothScroll from 'smooth-scroll';
+import '../LandingPage.css';
 
 export const Navigation = (props) => {
-  return (
+ useEffect(() => {
+    // Initialize smooth scroll
+    const scroll = new smoothScroll('a[href*="#"]', {
+      speed: 800,
+      offset: 100,
+    });
+ }, []);
+
+ return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
         <div className="navbar-header">
@@ -11,15 +21,14 @@ export const Navigation = (props) => {
             data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"
           >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
+            <span className="sr-only">Toggle navigation</span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
             WEIGH BRIDGE
-          </a>{" "}
+          </a>
         </div>
 
         <div
@@ -71,5 +80,5 @@ export const Navigation = (props) => {
         </div>
       </div>
     </nav>
-  );
+ );
 };

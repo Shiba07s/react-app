@@ -1,9 +1,9 @@
-/* General form styling */
+General form styling
 form {
     display: flex;
   
     flex-direction: column;
-    width: 413px; /* Adjust as needed */
+    /* width: 413px; Adjust as needed */
     margin: 0 auto; /* Center the form */
     padding: 20px;
     border: 1px solid #ccc;
@@ -44,4 +44,5 @@ form {
    form > div {
     margin-bottom: 15px;
    }
+
    

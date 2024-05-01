@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import * as serviceWorker from './serviceWorker';
 
 import 'react-toastify/dist/ReactToastify.css';
 // import './Login.css';
@@ -28,6 +29,9 @@ import DriverComponent from './Components/driver/DriverComponent';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import GateUser from './Components/gateUser/GateUser';
 import ListGateUser from './Components/gateUser/ListGateUser';
+import ListWeighBridgeOperator from './Components/weigh-bridgeOperator/ListWeighBridgeOperator';
+import WeighBridgeForm from './Components/weigh-bridgeOperator/WeighBridgeForm';
+import QualityForm from './Components/quality/QualityForm';
 
 
 function App() {
@@ -65,7 +69,7 @@ const FooterStyle = {
         {/* <Route path="/sidebar" element={<Sidebar/>} exact /> */}
         {/* <Route path="/gk" element={<GateKepper/>} exact /> */}
 
-                   <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/forget-password" element={<ForgetPasswordPage />} />
@@ -85,6 +89,9 @@ const FooterStyle = {
                     <Route path='/edit-driver/:driverId' element={DriverComponent}></Route>
                     <Route path='/gate-user' element={<GateUser />}></Route>
                     <Route path='/get-transaction' element= {<ListGateUser />}></Route>
+                    <Route path='/queue-vehicle-weigh' element={<ListWeighBridgeOperator />}></Route>
+                    <Route path='/add-wbform' element={<WeighBridgeForm />}></Route>
+                    <Route path='/add-quality-form' element={<QualityForm />}></Route>
 
 
       </Routes>
@@ -96,5 +103,7 @@ const FooterStyle = {
    
   )
 }
+serviceWorker.unregister();
+
 
 export default App
